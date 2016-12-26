@@ -1,0 +1,8 @@
+# Exclude LaTeX .out files:
+*.out
+# Exclude LaTeX .aux files:
+*.aux
+# Exclude LaTeX .log files:
+*.log
+# Exclude LaTeX .synctex.gz files:
+*.synctex.gz
