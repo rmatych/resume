@@ -1,15 +1,53 @@
-%============ Resume by Robert Matych============%
+%============ Resume by Robert Matych ============%
 \author{Robert Matych}
 
 \documentclass[12pt,letterpaper,oneside]{article}
 
 % Using the font Cantarell
 \usepackage[default]{cantarell}
-% 0.805in margins look great
-\usepackage[letterpaper, margin=0.805in]{geometry}
+% 0in margins for freedom in spacing
+\usepackage[letterpaper, margin=0in]{geometry}
 % No page numbers necessary
 \pagenumbering{gobble}
 
+% For URL visual style
+\usepackage[colorlinks=true, urlcolor = black]{hyperref}
+\newcommand{\changeurlcolor}[1]{\hypersetup{colorlinks=true, urlcolor=#1}}
+
+% For including images
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+% For centering images on a line
+\newcommand{\centerImage}[2]{\begingroup
+\setbox0=\hbox{\includegraphics[scale=#2]{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+
 \begin{document}
-Resume coming soon!
+%============ Begin header ============%
+\vspace*{0.4025in}
+\centering{
+	\huge
+	\textbf{ROBERT MATYCH}\\
+}
+\vspace*{0.09in}
+\centering{
+\normalsize
+\begin{tabular}{@{}c c c c@{}}
+\centerImage{phone}{0.035} 805-305-9924 \hspace{0.02in}
+& \hspace{0.02in}
+
+\href{mailto:rmatych@berkeley.edu}{\centerImage{mail}{0.035} rmatych@berkeley.edu}
+\hspace{0.02in} & \hspace{0.02in}
+
+\centerImage{location}{0.035} San Luis Obispo, CA \hspace{0.02in}
+& \hspace{0.02in}
+
+\changeurlcolor{blue}
+\href{http://www.linkedin.com/in/rmatych}{\centerImage{linkedin}{0.035} in/rmatych} \changeurlcolor{black}
+\end{tabular}\\
+\vspace*{-0.1in}
+\noindent\hfil\rule{.85\textwidth}{.4pt}\hfil
+}
+
 \end{document}
