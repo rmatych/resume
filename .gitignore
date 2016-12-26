@@ -6,3 +6,5 @@
 *.log
 # Exclude LaTeX .synctex.gz files:
 *.synctex.gz
+# Exclude LaTeX .dvi files:
+*.dvi
