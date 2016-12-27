@@ -25,21 +25,43 @@
 % For the   a e s t h e t i c
 \usepackage{tikz}
 
+% For nice circle symbols (bullet points)
+\usepackage{fdsymbol}
+
 % Nice header for resume sections
-\newenvironment{resSec}[1]{
+\newcommand{\resSec}[1]{
 	\hspace*{0.575in}
 	\begin{minipage}{\textwidth}
 		\begin{tikzpicture}
 			\draw [line width=4pt] (0,0) -- (2.1,0);
 		\end{tikzpicture}
 		\fontsize{20}{24}\selectfont #1\\
-	\end{minipage}
-}{}
+	\end{minipage}\\
+}
+
+% Nice time period columns that align with the resSec headers
+\newenvironment{dateCol}{
+	\vspace*{-0.3in}
+	\hspace*{.585in}
+	\fontsize{11}{13.2}\selectfont
+	\begin{minipage}[t]{.9in}
+		\begin{tabular}[t]{@{}l}
+}{\end{tabular}\end{minipage}}
+
+% Nice position / detail columns that align with the dateCol environment
+\newenvironment{resDet}{
+	\vspace*{-0.2in}
+	\fontsize{11}{13.2}\selectfont
+	\begin{minipage}[t]{5.125in}
+		\begin{tabular}[t]{@{}l}
+}{\end{tabular}\end{minipage}\\\vspace*{0.25in}}
+
+
 
 \begin{document}
 %============ Begin header ============%
 \vspace*{0.4025in}
-\centering{
+\centering
 	\huge
 	\textbf{ROBERT MATYCH}\\
 \vspace*{0.09in}
@@ -58,17 +80,23 @@
 \href{http://www.linkedin.com/in/rmatych}{\centerImage{linkedin}{0.035} in/rmatych} \changeurlcolor{black}
 \end{tabular}\\
 \vspace*{-0.1in}
-\noindent\hfil\rule{.85\textwidth}{.4pt}\hfil\break
-}
+\noindent\hfil\rule{.85\textwidth}{.4pt}\hfil\break\par
+
 %============ Begin content ============%
+\raggedright
 
 \vspace*{-0.1in}
-\begin{resSec}{Education}
-\end{resSec}\\
-\begin{resSec}{Work Experience}
-\end{resSec}\\
-\begin{resSec}{Projects}
-\end{resSec}\\
-\begin{resSec}{Languages and Technologies}
-\end{resSec}\\
+\resSec{Education}
+\begin{dateCol}
+\textbf{Aug 2014-}\\
+\textbf{June 2018}
+\end{dateCol}
+\begin{resDet}
+\textbf{Bachelor of Science in Computer Science and Engineering}\\
+\hspace{0.25in}$\smwhtcircle$University of California, Berkeley\\
+\hspace{0.25in}
+\end{resDet}
+\resSec{Work Experience}
+\resSec{Projects}
+\resSec{Education}
 \end{document}
