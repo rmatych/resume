@@ -16,7 +16,6 @@
 
 % For including images
 \usepackage{graphicx}
-\graphicspath{ {images/} }
 % For centering images on a line
 \newcommand{\centerImage}[2]{\begingroup
 \setbox0=\hbox{\includegraphics[scale=#2]{#1}}%
@@ -24,9 +23,6 @@
 
 % For the   a e s t h e t i c
 \usepackage{tikz}
-
-% For nice circle symbols (bullet points)
-\usepackage{fdsymbol}
 
 % Nice header for resume sections
 \newcommand{\resSec}[1]{
@@ -59,7 +55,7 @@
 
 % Indented bullet point command
 \newcommand{\respt}{
-	\hspace{0.25in}$\smwhtcircle$
+	\hspace{0.25in}$\bullet$
 }
 
 % Indented bullet continuation command
@@ -86,17 +82,17 @@
 \vspace*{0.09in}
 \normalsize
 \begin{tabular}{@{}c c c c@{}}
-\centerImage{phone}{0.035} 805-305-9924 \hspace{0.02in}
+\centerImage{images/phone.png}{0.035} 805-305-9924 \hspace{0.02in}
 & \hspace{0.02in}
 
-\href{mailto:rmatych@berkeley.edu}{\centerImage{mail}{0.035} rmatych@berkeley.edu}
+\href{mailto:rmatych@berkeley.edu}{\centerImage{images/mail.png}{0.035} rmatych@berkeley.edu}
 \hspace{0.02in} & \hspace{0.02in}
 
-\centerImage{location}{0.035} San Luis Obispo, CA \hspace{0.02in}
+\centerImage{images/location.png}{0.035} Berkeley, CA \hspace{0.02in}
 & \hspace{0.02in}
 
 \changeurlcolor{blue}
-\href{http://www.linkedin.com/in/rmatych}{\centerImage{linkedin}{0.035} in/rmatych} \changeurlcolor{black}
+\href{http://www.linkedin.com/in/rmatych}{\centerImage{images/linkedin.png}{0.035} in/rmatych} \changeurlcolor{black}
 \end{tabular}\\
 \vspace*{-0.1in}
 \noindent\hfil\rule{.85\textwidth}{.4pt}\hfil\break\par
@@ -108,7 +104,7 @@
 \resSec{Education}
 	\begin{dateCol}
 		\textbf{Aug 2014-}\\
-		\textbf{June 2018}
+		\textbf{May 2018}
 	\end{dateCol}
 	\begin{resDet}
 		\textbf{Bachelor of Science in Computer Science and Engineering}\\
@@ -183,7 +179,8 @@
 	\respt Java\\
 	\respt Python\\
 	\respt C\\
-	\respt MATLAB
+	\respt MATLAB\\
+	\respt JavaScript
 \end{skillTab}
 \begin{skillTab}{Domain-Specific}
 	\respt HTML5\\
